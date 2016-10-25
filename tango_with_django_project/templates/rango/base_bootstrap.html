@@ -21,7 +21,7 @@
             rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color:#F7DC6F;">
     <nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
         <button type="button" class="navbar-toggler hidden-sm-up"
                 data-toggle="collapse" data-target="#navbar"
@@ -62,10 +62,24 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
+            <div class="col-sm-3 col-md-2 sidebar" style="background-color:#F5B7B1;">
+                <ul class="nav nav-list">
+                    <li class="nav-header">Type to find a category</li>
+                    <form>
+                        <li>
+                            <input class="search-query form-control" type="text"
+                                    name="suggestion" id="suggestion" value="">
+                        </li>
+                    </form>
+                </ul>
+                <hr>
+                <div id="cats">
+                </div>
+                <!--
                 {% block sidebar_block %}
                     {% get_category_list category %}
                 {% endblock %}
+                -->
             </div>
             <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main">
             
@@ -80,13 +94,18 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"
+            integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB"
+            crossorigin="anonymous"></script>
     <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js">
     </script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js">
     </script>
 
     <script type="text/javascript" src="{% static "js/rango-jquery.js" %}"></script>
+    <script src="{% static "js/rango-ajax.js" %}"></script>
 </body>
 
 </html>
